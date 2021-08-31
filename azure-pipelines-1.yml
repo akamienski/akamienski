@@ -2,9 +2,6 @@ trigger:
 - main
 
 steps:
-- task: DownloadGitHubRelease@0
+- task: gitsync@1
   inputs:
-    connection: 'github.com_akamienski'
-    userRepository: 'akamienski/akamienski'
-    defaultVersionType: 'latest'
-    downloadPath: '$(System.ArtifactsDirectory)'
+    GitRepoUrl: 'https://github.com/akamienski/akamienski.git'
