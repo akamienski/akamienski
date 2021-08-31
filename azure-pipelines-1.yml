@@ -1,0 +1,10 @@
+trigger:
+- main
+
+steps:
+- task: DownloadGitHubRelease@0
+  inputs:
+    connection: 'github.com_akamienski'
+    userRepository: 'akamienski/akamienski'
+    defaultVersionType: 'latest'
+    downloadPath: '$(System.ArtifactsDirectory)'
