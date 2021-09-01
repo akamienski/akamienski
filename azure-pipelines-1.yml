@@ -1,7 +1,0 @@
-trigger:
-- main
-
-steps:
-- task: gitsync@1
-  inputs:
-    GitRepoUrl: 'https://github.com/akamienski/akamienski.git'
