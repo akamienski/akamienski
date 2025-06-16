@@ -1,0 +1,242 @@
+{
+    "editor.lineDecorationsWidth": 12,
+    "settingsSync.keybindingsPerPlatform": false,
+    "editor.glyphMargin": false,
+    "editor.folding": true,
+    "workbench.startupEditor": "none",
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.scrollWithEditor": false,
+    "workbench.tree.enableStickyScroll": false,
+    "editor.stickyScroll.enabled": false,
+    "git.openRepositoryInParentFolders": "never",
+    "terminal.integrated.commandsToSkipShell": [
+        "github.copilot.terminal.suggestCommand",
+        "workbench.action.positionPanelRight",
+        "workbench.action.positionPanelBottom",
+        "workbench.action.toggleEditorVisibility",
+        "workbench.action.files.newUntitledFile",
+        "workbench.action.splitEditorToRightGroup",
+        "workbench.action.splitEditorDown",
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.terminal.switchTerminal",
+        "workbench.action.toggleZenMode",
+        "workbench.action.openRecent",
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.panel.chatSidebar",
+        "workbench.action.files.save",
+        "workbench.action.toggleStatusbarVisibility",
+        "workbench.action.positionPanelBottom",
+        "workbench.action.positionPanelLeft",
+        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.createTerminalEditor",
+        "workbench.action.createTerminalEditorSameGroup",
+        "workbench.action.copyEditorToNewWindow",
+        "workbench.action.toggleAuxiliaryBar",
+        "workbench.panel.chat",
+        "cursorUndo"
+    ],
+    "redhat.telemetry.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+    "explorer.confirmDragAndDrop": false,
+    "terminal.integrated.persistentSessionReviveProcess": "never",
+    "terminal.integrated.enablePersistentSessions": false,
+    "editor.codeLens": false,
+    "vs-kubernetes": {
+        "vscode-kubernetes.helm-path-windows": "C:\\Users\\Adams\\.vs-kubernetes\\tools\\helm\\windows-amd64\\helm.exe",
+        "vscode-kubernetes.kubectl-path-windows": "C:\\Users\\Adams\\.vs-kubernetes\\tools\\kubectl\\kubectl.exe",
+        "vscode-kubernetes.minikube-path-windows": "C:\\Users\\Adams\\.vs-kubernetes\\tools\\minikube\\windows-amd64\\minikube.exe"
+    },
+    "vscode-kubernetes.kubectl-path": "C:\\users\\administrator\\Downloads\\kubectl.exe",
+    "vscode-kubernetes.helm-path": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Helm.Helm_Microsoft.Winget.Source_8wekyb3d8bbwe\\windows-amd64\\helm.exe",
+    "vscode-kubernetes.minikube-path": "C:\\Program Files\\Kubernetes\\Minikube\\minikube.exe",
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "python.REPL.enableREPLSmartSend": false,
+    "powershell.integratedConsole.suppressStartupBanner": true,
+    "powershell.integratedConsole.focusConsoleOnExecute": false,
+    "workbench.colorCustomizations": {},
+    "workbench.editor.editorActionsLocation": "titleBar",
+    "powershell.startAsLoginShell.osx": false,
+    "cSpell.enableFiletypes": [
+        "azcli"
+    ],
+    "cSpell.ignoreWords": [
+        "Asteski",
+        "Randomword",
+        "ghpl",
+        "powertoys",
+        "winmac"
+    ],
+    "cSpell.userWords": [
+        "Crosshairs",
+        "debloated",
+        "decluttered",
+        "Fancyzones",
+        "Fullscreen",
+        "Gcode",
+        "QBRE",
+        "Resizer",
+        "taskkill",
+        "UseBoostLib",
+        "winget",
+        "Winstep"
+    ],
+    "markdown-preview-enhanced.previewTheme": "one-dark.css",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "errorLens.gutterIconsEnabled": true,
+    "indentRainbow.ignoreErrorLanguages": [
+        
+        "markdown"
+    ],
+    "editor.suggest.showWords": false,
+    "terminal.integrated.defaultProfile.linux": "",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingQuotes": "never",
+    "update.mode": "manual",
+    "editor.snippetSuggestions": "none",
+
+    // HIDE TABS
+
+    // "window.titleBarStyle": "native",
+    "apc.menubar.compact": false,
+    "apc.electron": {
+    "frame": false,
+    "titleBarStyle": "hidden"
+    },
+    "apc.stylesheet": {
+    ".title-label": "display: none !important",
+    ".composite.title": "display: block !important",
+    ".monaco-workbench .part.sidebar .title-actions .actions-container": "justify-content: space-evenly !important"
+    },
+    "editor.parameterHints.enabled": false,
+    "editor.hover.enabled": false,
+    "powershell.enableProfileLoading": false,
+    "powershell.integratedConsole.showOnStartup": false,
+    "apc.header": {
+
+
+    },
+    "editor.fontFamily": "JetBrainsMono Nerd Font Propo, Consolas, 'Courier New'",
+    "powershell.integratedConsole.startInBackground": true,
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontSize": 13,
+    "errorLens.codeLensEnabled": true,
+    "editor.codeActionWidget.includeNearbyQuickFixes": false,
+    "errorLens.codeLensOnClick": "none",
+    "errorLens.enabledDiagnosticLevels": [
+        "warning",
+        "info"
+    ],
+    "terminal.integrated.suggest.quickSuggestions": false,
+    "workbench.sideBar.location": "right",
+    "inlineChat.holdToSpeech": false,
+    "symbols.hidesExplorerArrows": true,
+    "errorLens.problemRangeDecorationEnabled": true,
+    "errorLens.statusBarCommand": "goToLine",
+    "errorLens.respectUpstreamEnabled": {
+        "statusBar": true
+    },
+    "errorLens.ignoreUntitled": true,
+    "terminal.integrated.tabs.enabled": false,
+    "better-comments.tags": [
+        
+
+        {
+            "tag": "!",
+            "color": "#FF2D00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "?",
+            "color": "#3498DB",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "//",
+            "color": "#474747",
+            "strikethrough": true,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "todo",
+            "color": "#FF8C00",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "warn",
+            "color": "#EACD61",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        },
+        {
+            "tag": "*",
+            "color": "#98C379",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
+    "window.newWindowProfile": "Default",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+        "zsh": {
+            "path": "zsh"
+        },
+        "fish": {
+            "path": "fish"
+        },
+        "tmux": {
+            "path": "tmux",
+            "icon": "terminal-tmux"
+        },
+        "pwsh": {
+            "path": "pwsh",
+            "icon": "terminal-powershell"
+        }
+    },
+    "settingsSync.ignoredSettings": [
+
+    ],
+    "workbench.activityBar.location": "hidden",
+    "workbench.colorTheme": "Monokai Classic",
+    "workbench.iconTheme": "Monokai Classic Icons",
+    "python.defaultInterpreterPath": "C:\\Users\\Adams\\AppData\\Local\\Microsoft\\WindowsApps\\python3.13.exe",
+    "fluent-ui-vscode.compact": true,
+    "fluent-ui-vscode.enableWallpaper": true,
+    "continue.remoteConfigServerUrl": "https://codestral.mistral.ai/v1/fim/completions",
+    "continue.userToken": "uMJ6AKdRtQlabQ1Asv1H04Eys2CiXyum",
+    "editor.renderWhitespace": "all",
+    "markdown-preview-enhanced.scrollSync": true,
+    "window.commandCenter": false,
+    "chat.commandCenter.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "nightswitch.themeNight": "Monokai Pro (Filter Spectrum)",
+    "nightswitch.themeDay": "Monokai Pro Light (Filter Sun)",
+    "nightswitch.location": "(52.22 21.01)",
+    "workbench.statusBar.visible": false,
+    // "window.density.editorTabHeight": "compact",
+
+    // HIDE TABS
+}
