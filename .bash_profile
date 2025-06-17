@@ -1,0 +1,13 @@
+# Aliases
+alias n='nano'
+alias t='touch'
+alias v='code -r'
+alias vs='code .'
+alias push='git push'
+alias st='git status'
+alias status='git status'
+alias st='git status'
+alias pu='git pull'
+alias pull='git pull'
+alias clone='git clone'
+alias stash='git stash'
