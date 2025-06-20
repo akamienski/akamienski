@@ -1,0 +1,24 @@
+/* Reorder context menu options */
+#context-reload {
+    order: 1 !important; /* Refresh first */
+}
+
+#context-back {
+    order: 2 !important; /* Back second */
+}
+
+#context-forward {
+    order: 3 !important; /* Forward third */
+}
+
+#context-bookmarkpage {
+    order: 4 !important; /* Bookmark fourth */
+}
+
+#zen-toast-container > .zen-toast:has(> label[data-l10n-id="zen-background-tab-opened-toast"]) {
+    display: none !important;
+}
+
+#back-button, #forward-button { display:none!important; }
+
+.zen-current-workspace-indicator { visibility: collapse; }
