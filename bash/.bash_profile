@@ -1,5 +1,5 @@
 # Aliases
-alias n='nano'
+alias cls='clear'
 alias t='touch'
 alias v='code -r'
 alias vs='code .'
