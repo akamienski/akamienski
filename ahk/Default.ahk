@@ -25,7 +25,7 @@ isBlockedWindow() {
     exe := WinGetProcessName(hwnd)
 
     blockedClasses := ["Shell_TrayWnd", "ThunderRT5Form"]
-    blockedExes    := ["Nexus.exe", "Overwatch.exe", "SandFall-WinGDK-Shipping.exe", "SandFall.exe"]
+    blockedExes    := ["Nexus.exe", "Overwatch.exe", "SandFall-WinGDK-Shipping.exe", "SandFall.exe", "bg3.exe", "bg3_dx11.exe"]
 
     isBlocked := false
     for idx, blockedClass in blockedClasses {
