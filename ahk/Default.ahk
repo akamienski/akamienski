@@ -1,5 +1,6 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
+; #NoTrayIcon
 
 ; DEBUG HELPER
 ; #F1:: {
@@ -11,7 +12,7 @@
 ;     SetTimer () => ToolTip("", , , 1), -3000
 ; }
 
-;                                   ################ KEYBOARD SHORTCUTS ################
+;################ KEYBOARD SHORTCUTS ################ KEYBOARD SHORTCUTS ################ KEYBOARD SHORTCUTS ################ KEYBOARD SHORTCUTS ################
 
 global FromCtrlQ := false
 global FromWinS := false
@@ -139,6 +140,7 @@ RCtrl:: {
 }
 
 ; ## Windows Key Shortcuts ##
+
 ; Win+Mouse4=> Win+Left
 #XButton1::{
         Send("#{Left}")
@@ -252,7 +254,7 @@ RCtrl:: {
 }
 #HotIf
 
-;                                   ################ SAME APP CYCLE ################
+;################ SAME APP CYCLE ################ SAME APP CYCLE ################ SAME APP CYCLE ################ SAME APP CYCLE ################
 SendMode("Input")
 SetWorkingDir(A_ScriptDir)
 
@@ -341,7 +343,7 @@ getSortedActiveWindowsIdList() {
 }
 #HotIf
 
-;                                   ################# TERMINAL SCROLL AND NEWLINE FIX ################
+;################# TERMINAL SCROLL AND NEWLINE FIX ################# TERMINAL SCROLL AND NEWLINE FIX ################ TERMINAL SCROLL AND NEWLINE FIX ################ TERMINAL SCROLL AND NEWLINE FIX ################
 
 A_MaxHotkeysPerInterval := 1000 
 
@@ -380,7 +382,7 @@ HotIf(hk=>CheckActive())
 
 HotIf
 
-;                                   ################ TRIGGER PEEK USING SPACEBAR ################
+;################ TRIGGER PEEK USING SPACEBAR ################ TRIGGER PEEK USING SPACEBAR ################ TRIGGER PEEK USING SPACEBAR ################ TRIGGER PEEK USING SPACEBAR ################
 
 GetFocusedControlClassNN()
 {
