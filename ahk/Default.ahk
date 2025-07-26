@@ -343,7 +343,7 @@ getSortedActiveWindowsIdList() {
 }
 #HotIf
 
-;################# TERMINAL SCROLL AND NEWLINE FIX ################# TERMINAL SCROLL AND NEWLINE FIX ################ TERMINAL SCROLL AND NEWLINE FIX ################ TERMINAL SCROLL AND NEWLINE FIX ################
+;################# TERMINAL SCROLL AND NEWLINE FIX ################# TERMINAL SCROLL AND NEWLINE FIX ################ TERMINAL SCROLL AND NEWLINE FIX ################
 
 A_MaxHotkeysPerInterval := 1000 
 
