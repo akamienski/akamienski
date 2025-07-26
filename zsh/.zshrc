@@ -1,15 +1,12 @@
 # Variables
-export git="/mnt/c/Users/$USER/Code"
 export ZSH="$HOME/.oh-my-zsh"
 export profile="$HOME/.zshrc"
+export dev='/home/adams/git'
 ZSH_THEME="robbyrussell"
 
-# az cli configuration
-az config set cli.interactive_mode=false
-az config set core.only_show_errors=true
-
 # Aliases
-alias reload='omz reload'
+alias git="/mnt/c/Program\ Files/Git/cmd/git.exe"
+alias re='omz reload'
 alias info='neofetch'
 alias t='touch'
 alias v='code -r'
@@ -33,6 +30,7 @@ alias py=python3
 alias python=python3
 alias pip=pip3
 alias tree=tr
+alias dev="cd $dev"
 
 # Functions
 pa(){
@@ -51,12 +49,16 @@ wua(){
     sudo apt update
     sudo apt upgrade
 }
-
-plugins=(git zsh-syntax-highlighting)
-
-source $ZSH/oh-my-zsh.sh
+azlogin() {
+  az logout --output none
+  az login --only-show-errors --output none --tenant "1f86f81e-6160-4f93-aaa6-1a16a23993d2" --allow-no-subscriptions
+}
 
 # User configuration
+
+plugins=(git zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

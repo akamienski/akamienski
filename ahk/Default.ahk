@@ -1,8 +1,17 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
-#NoTrayIcon
 
-; #### KEYBOARD SHORTCUTS ####
+; DEBUG HELPER
+; #F1:: {
+;     hwnd := WinActive("A")
+;     class := WinGetClass(hwnd)
+;     exe := WinGetProcessName(hwnd)
+;     isBlocked := isBlockedWindow()
+;     ToolTip("Window: " . exe . "`nClass: " . class . "`nBlocked: " . (isBlocked ? "Yes" : "No"), , , 1)
+;     SetTimer () => ToolTip("", , , 1), -3000
+; }
+
+;                                   ################ KEYBOARD SHORTCUTS ################
 
 global FromCtrlQ := false
 global FromWinS := false
@@ -17,159 +26,174 @@ isBlockedWindow() {
     blockedClasses := ["Shell_TrayWnd", "ThunderRT5Form"]
     blockedExes    := ["Nexus.exe", "Overwatch.exe", "SandFall-WinGDK-Shipping.exe", "SandFall.exe"]
 
-    return blockedClasses.Has(class) || blockedExes.Has(exe)
+    isBlocked := false
+    for idx, blockedClass in blockedClasses {
+        if (class == blockedClass) {
+            isBlocked := true
+            break
+        }
+    }
+    
+    if (!isBlocked) {
+        for idx, blockedExe in blockedExes {
+            if (exe == blockedExe) {
+                isBlocked := true
+                break
+            }
+        }
+    }
+    
+    return isBlocked
 }
 isAllowedEdge()    => WinActive("ahk_exe msedge.exe") && !isBlockedWindow()
 isAllowedCode()    => WinActive("ahk_exe code.exe") && !isBlockedWindow()
 isAllowedZen()     => WinActive("ahk_exe zen.exe") && !isBlockedWindow()
 
 ; ## Global Shortcuts ##
-; Ctrl+Q => Ctrl+W
-#InputLevel 2
+#InputLevel 1
+
+!Space:: {
+    if WinActive("ahk_exe overwatch.exe") {
+        return
+    }
+    else {
+        Send("!{Space}")
+    }
+}
+
+#HotIf isBlockedWindow()
+; Win+Q => Alt+F4
+#q::{
+    Send("!{F4}")
+}
+; Win+Ctrl+Q => Win+Ctrl+F4
+^#q::{
+    Send("^#{F4}")
+}
+#HotIf
+
+#HotIf !isBlockedWindow()
+; RCtrl => Context Menu
+RCtrl:: {
+    Click("Right")
+}
+;Ctrl+Q => Ctrl+W
 ^q::{
     if WinActive("ahk_exe chatgpt.exe") {
         FromCtrlQ := true
         Send ("^+{Del}")
         SetTimer () => FromCtrlQ := false, -10
         return
-    } 
-    ; ChatGPT: Ctrl+Q => Ctrl+Shift+Delete
-    else if !isBlockedWindow() {
+    }
+    else {
         FromCtrlQ := true
         Send ("^w")
         SetTimer () => FromCtrlQ := false, -10
         return
     }
 }
-#InputLevel 1
-; RCtrl => Context Menu
-#HotIf WinActive("ahk_class CabinetWClass") || WinActive("ahk_class Progman")
-RControl::{
-    if !isBlockedWindow() {
-        Send("+{F10}")
-    }
-}
-#HotIf
 ; Ctrl+` => Ctrl+Shift+Tab
 ^`::{
-    if !isBlockedWindow() {
-        Send("^+{Tab}")
-    }
+    Send("^+{Tab}")
 }
 ; Ctrl+Up => PgUp
 ^Up::{
-    if !isBlockedWindow() {
-        Send("{PgUp}")
-    }
+    Send("{PgUp}")
 }
 ; Ctrl+Down => PgDn
 ^Down::{
-    if !isBlockedWindow() {
-        Send("{PgDn}")
-    }
+    Send("{PgDn}")
 }
 ; Ctrl+N => Ctrl+T
 ^n::{
     if  WinActive("ahk_exe chatgpt.exe") {
         Send("^+o")
     }
-    else if !isBlockedWindow() {
+    else {
         Send("^t")
     }
 }
 ; Ctrl+T => Ctrl+Shift+N
 ^t::{
-    if !isBlockedWindow() {
-        Send("^+n")
-    }
+    Send("^+n")
 }
 ; Ctrl+Shift+Up => Ctrl+Home
 ^+Up::{
-    if !isBlockedWindow() {
-        Send("^{Home}")
-    }
+    Send("^{Home}")
 }
 ; Ctrl+Shift+Down => Ctrl+End
 ^+Down::{
-    if !isBlockedWindow() {
-        Send("^{End}")
-    }
+    Send("^{End}")
 }
 ; Ctrl+Alt+Left => Home
 ^!Left::{
-    if !isBlockedWindow() {
-        Send("{Home}")
-    }
+    Send("{Home}")
 }
 ; Ctrl+Alt+Right => End
 ^!Right::{
-    if !isBlockedWindow() {
-        Send("{End}")
-    }
+    Send("{End}")
 }
 ; Ctrl+Alt+F => F11
 ^!f::{
-    if !isBlockedWindow() {
-        Send("{F11}")
-    }
+    Send("{F11}")
+}
+
+; ## Windows Key Shortcuts ##
+; Win+Mouse4=> Win+Left
+#XButton1::{
+        Send("#{Left}")
+}
+; Win+Mouse5=> Win+Right
+#XButton2::{
+        Send("#{Right}")
+}
+; Alt+Mouse4=> Ctrl+Win+Left
+^#XButton1::{
+        Send("^#{Left}")
+}
+; Alt+Mouse5=> Ctrl+Win+Right
+^#XButton2::{
+        Send("^#{Right}")
 }
 ; Win+S => Shift+Win+S
 #+s::{
     if (FromWinS) {
         return
     }
-    if !isBlockedWindow() {
+    else {
         Send("#{PrintScreen}")
     }
 }
 ; Win+Shift+S => Shift+Win+S
 #s::{
-    if !isBlockedWindow() {
-        FromWinS := true
-        Send("+#s")
-        SetTimer () => FromWinS := false, -10
-        return
-    }
+    FromWinS := true
+    Send("+#s")
+    SetTimer () => FromWinS := false, -10
 }
 ; Win+Q => Alt+F4
 #q::{
-    if !isBlockedWindow() {
-        Send("!{F4}")
-    }
+    Send("!{F4}")
 }
 ; Win+Ctrl+Q => Win+Ctrl+F4
 ^#q::{
-    if !isBlockedWindow() {
-        Send("^#{F4}")
-    }
+    Send("^#{F4}")
 }
 ; Win+Enter => Maximize
-<#Enter::{
-    if isBlockedWindow() {
-        return
-    }
-    else if !isBlockedWindow() {
-
-        WinMaximize("A")
-    }
+<#Enter::
+<#NumpadEnter::{
+    WinMaximize("A")
 }
 ; Win+M => Minimize
 <#m::{
-    if isBlockedWindow() {
-        return
-    }
-    else if !isBlockedWindow() {
-        WinMinimize("A")
-    }
+    WinMinimize("A")
 }
 ; FancyZones
 ^#f::{
-    if !isBlockedWindow() {
-        Send("+#f")
-    }
+    Send("+#f")
 }
 
 ; ## App Shortcuts ##
+
 ; Custom Ctrl+W logic
 ^w::{
     if (FromCtrlQ)
@@ -195,7 +219,7 @@ RControl::{
         Send("^+s")
     }
     else {
-        Send ("^w")
+        Send("^w")
     }
     return
 }
@@ -226,9 +250,9 @@ RControl::{
         Send("^+z")
     }
 }
+#HotIf
 
-; #### SAME APP CYCLE ####
-
+;                                   ################ SAME APP CYCLE ################
 SendMode("Input")
 SetWorkingDir(A_ScriptDir)
 
@@ -295,6 +319,7 @@ getSortedActiveWindowsIdList() {
   return sortedActiveWindowsIdList
 }
 
+#HotIf !isBlockedWindow()
 !`:: {
   global
   activeWindowsIdList := getSortedActiveWindowsIdList()
@@ -314,8 +339,9 @@ getSortedActiveWindowsIdList() {
   activatePreviousWindow(activeWindowsIdList)
   return
 }
+#HotIf
 
-; ##### TERMINAL SCROLL AND NEWLINE FIX ####
+;                                   ################# TERMINAL SCROLL AND NEWLINE FIX ################
 
 A_MaxHotkeysPerInterval := 1000 
 
@@ -354,7 +380,7 @@ HotIf(hk=>CheckActive())
 
 HotIf
 
-; #### TRIGGER PEEK USING SPACEBAR ####
+;                                   ################ TRIGGER PEEK USING SPACEBAR ################
 
 GetFocusedControlClassNN()
 {
