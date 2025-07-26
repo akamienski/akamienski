@@ -678,7 +678,8 @@
     },
     {
         "key": "ctrl+w",
-        "command": "workbench.action.closeActiveEditor"
+        "command": "workbench.action.closeActiveEditor",
+        "when": "!terminalFocus"
     },
     {
         "key": "ctrl+f4",
@@ -1617,10 +1618,6 @@
         "command": "-workbench.action.splitEditorLeft"
     },
     {
-        "key": "ctrl+shift+t",
-        "command": "workbench.action.splitEditorUp"
-    },
-    {
         "key": "ctrl+k ctrl+oem_5",
         "command": "-workbench.action.splitEditorUp"
     },
@@ -2004,5 +2001,28 @@
         "key": "ctrl+shift+n",
         "command": "-chatEditor.action.reject",
         "when": "chatEdits.hasEditorModifications && editorFocus && !chatEdits.isRequestInProgress || chatEdits.hasEditorModifications && notebookEditorFocused && !chatEdits.isRequestInProgress"
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "-mergeEditor.toggleBetweenInputs",
+        "when": "isMergeEditor"
+    },
+    {
+        "key": "ctrl+l",
+        "command": "-workbench.action.chat.newChat",
+        "when": "chatEditingParticipantRegistered && chatIsEnabled && inChat"
+    },
+    {
+        "key": "shift+alt+r",
+        "command": "-remote-wsl.revealInExplorer",
+        "when": "editorFocus && remoteName == 'wsl'"
+    },
+    {
+        "key": "ctrl+k ctrl+e",
+        "command": "revealFileInOS"
+    },
+    {
+        "key": "ctrl+shift+q",
+        "command": "workbench.action.closeAllEditors"
     }
 ]

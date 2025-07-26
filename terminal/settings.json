@@ -26,6 +26,14 @@
         {
             "command": 
             {
+                "action": "prevTab",
+                "tabSwitcherMode": "inOrder"
+            },
+            "id": "User.prevTab.2A0DA8E0"
+        },
+        {
+            "command": 
+            {
                 "action": "newTab"
             },
             "id": "User.newTab.5DEADB41"
@@ -37,18 +45,14 @@
         {
             "command": 
             {
-                "action": "prevTab",
-                "tabSwitcherMode": "inOrder"
-            },
-            "id": "User.prevTab.2A0DA8E0"
-        },
-        {
-            "command": 
-            {
                 "action": "splitPane",
                 "split": "right"
             },
             "id": "User.splitPane.864CD510"
+        },
+        {
+            "command": "closePane",
+            "id": "User.closePane"
         },
         {
             "command": 
@@ -57,10 +61,6 @@
                 "index": 5
             },
             "id": "User.newTab.663EF760"
-        },
-        {
-            "command": "closePane",
-            "id": "User.closePane"
         },
         {
             "command": 
@@ -148,21 +148,50 @@
                 "index": 8
             },
             "id": "User.newTab.B7F682DF"
+        },
+        {
+            "command": 
+            {
+                "action": "globalSummon",
+                "desktop": "toCurrent",
+                "dropdownDuration": 0,
+                "monitor": "any",
+                "name": "_quake",
+                "toggleVisibility": true
+            },
+            "id": "User.globalSummon.A21F2F9B"
         }
     ],
-    "alwaysShowNotificationIcon": false,
+    "alwaysShowNotificationIcon": true,
     "alwaysShowTabs": true,
     "autoHideWindow": false,
     "centerOnLaunch": true,
-    "compatibility.allowHeadless": false,
+    "compatibility.allowHeadless": true,
     "confirmCloseAllTabs": false,
     "copyFormatting": "none",
     "copyOnSelect": true,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "disableAnimations": true,
     "experimental.detectURLs": true,
     "focusFollowMouse": true,
     "keybindings": 
     [
+        {
+            "id": "User.globalSummon.A21F2F9B",
+            "keys": "win+`"
+        },
+        {
+            "id": "User.prevTab.2A0DA8E0",
+            "keys": "ctrl+shift+`"
+        },
+        {
+            "id": "Terminal.OpenNewTabProfile0",
+            "keys": "ctrl+n"
+        },
+        {
+            "id": "User.nextTab.87C324ED",
+            "keys": "ctrl+tab"
+        },
         {
             "id": "User.prevTab.87C324ED",
             "keys": "ctrl+shift+tab"
@@ -176,39 +205,15 @@
             "keys": "ctrl+shift+d"
         },
         {
-            "id": "User.nextTab.87C324ED",
-            "keys": "ctrl+tab"
+            "id": "User.paste",
+            "keys": "ctrl+v"
         },
         {
             "id": "User.find",
             "keys": "ctrl+shift+f"
         },
         {
-            "id": "User.paste",
-            "keys": "ctrl+v"
-        },
-        {
-            "id": "Terminal.OpenNewTabProfile0",
-            "keys": "ctrl+n"
-        },
-        {
-            "id": "Terminal.OpenNewTabProfile0",
-            "keys": "ctrl+1"
-        },
-        {
-            "id": "User.newTab.89E6CA61",
-            "keys": "ctrl+5"
-        },
-        {
-            "id": "User.prevTab.2A0DA8E0",
-            "keys": "ctrl+shift+`"
-        },
-        {
-            "id": "User.newTab.663EF760",
-            "keys": "ctrl+6"
-        },
-        {
-            "id": null,
+            "id": "User.toggleFocusMode",
             "keys": "ctrl+shift+w"
         },
         {
@@ -216,51 +221,43 @@
             "keys": "alt+w"
         },
         {
-            "id": null,
+            "id": "Terminal.OpenNewTabProfile0",
             "keys": "ctrl+shift+1"
         },
         {
-            "id": null,
-            "keys": "ctrl+shift+5"
-        },
-        {
-            "id": null,
+            "id": "User.newTab.1FA5EB5",
             "keys": "ctrl+shift+2"
         },
         {
-            "id": null,
+            "id": "User.newTab.89E6CA61",
+            "keys": "ctrl+shift+5"
+        },
+        {
+            "id": "User.newTab.CCE909E3",
             "keys": "ctrl+shift+3"
+        },
+        {
+            "id": "User.newTab.F4C304FB",
+            "keys": "ctrl+shift+4"
         },
         {
             "id": null,
             "keys": "ctrl+shift+t"
         },
         {
-            "id": null,
-            "keys": "ctrl+shift+4"
-        },
-        {
-            "id": "User.newTab.B7F682DF",
-            "keys": "ctrl+9"
-        },
-        {
-            "id": null,
+            "id": "User.newTab.663EF760",
             "keys": "ctrl+shift+6"
         },
         {
-            "id": null,
+            "id": "User.newTab.B1B78DBA",
             "keys": "ctrl+shift+7"
         },
         {
-            "id": null,
+            "id": "User.newTab.E694A910",
             "keys": "ctrl+shift+8"
         },
         {
-            "id": "User.newTab.CCE909E3",
-            "keys": "ctrl+3"
-        },
-        {
-            "id": null,
+            "id": "User.newTab.B7F682DF",
             "keys": "ctrl+shift+9"
         },
         {
@@ -272,40 +269,20 @@
             "keys": "ctrl+shift+m"
         },
         {
-            "id": "User.toggleFocusMode",
-            "keys": "ctrl+w"
-        },
-        {
-            "id": "User.newTab.1FA5EB5",
-            "keys": "ctrl+2"
-        },
-        {
             "id": "User.newTab.5DEADB41",
             "keys": "ctrl+t"
         },
         {
-            "id": "User.toggleFullscreen",
-            "keys": "f2"
-        },
-        {
-            "id": "User.newTab.E694A910",
-            "keys": "ctrl+8"
-        },
-        {
             "id": "User.closeTab.0",
-            "keys": "ctrl+q"
+            "keys": "ctrl+w"
         },
         {
-            "id": "User.newTab.F4C304FB",
-            "keys": "ctrl+4"
-        },
-        {
-            "id": "User.newTab.B1B78DBA",
-            "keys": "ctrl+7"
+            "id": null,
+            "keys": "alt+enter"
         }
     ],
     "launchMode": "focus",
-    "minimizeToNotificationArea": false,
+    "minimizeToNotificationArea": true,
     "multiLinePasteWarning": false,
     "newTabMenu": 
     [
@@ -364,6 +341,7 @@
                 "hidden": false,
                 "icon": "ms-appx:///ProfileIcons/{9acb9455-ca41-5af7-950f-6bca1bc9722f}.png",
                 "name": "Ubuntu",
+                "scrollbarState": "hidden",
                 "startingDirectory": "~"
             },
             {
@@ -371,7 +349,8 @@
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
-                "name": "Command Prompt"
+                "name": "Command Prompt",
+                "scrollbarState": "hidden"
             },
             {
                 "guid": "{61ce8053-aff5-5723-8755-56402411bd01}",
@@ -421,7 +400,6 @@
     ],
     "showTabsInTitlebar": true,
     "showTerminalTitleInTitlebar": true,
-    "startOnUserLogin": false,
     "tabSwitcherMode": "inOrder",
     "tabWidthMode": "equal",
     "theme": "system",
