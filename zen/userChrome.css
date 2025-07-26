@@ -19,6 +19,20 @@
     display: none !important;
 }
 
-#back-button, #forward-button { display:none!important; }
+#back-button{
+display: none !important;
+}
+
+#forward-button {
+display: none !important;
+}
 
 .zen-current-workspace-indicator { visibility: collapse; }
+
+/* about:config settings */
+/* zen.theme.content-element-separation - 4*/
+/* toolkit.tabbox.switchByScrolling */
+/* widget.windows.mica */
+/* zen.mediacontrols.enabled */
+/* zen.workspaces.show-workspace-indicator */
+/* zen.view.experimental-no-window-controls */
