@@ -343,7 +343,7 @@ getSortedActiveWindowsIdList() {
 }
 #HotIf
 
-;################# TERMINAL SCROLL AND NEWLINE FIX ################# TERMINAL SCROLL AND NEWLINE FIX ################ TERMINAL SCROLL AND NEWLINE FIX ################ TERMINAL SCROLL AND NEWLINE FIX ################
+;################# TERMINAL SCROLL AND NEWLINE FIX ################# TERMINAL SCROLL AND NEWLINE FIX ################ TERMINAL SCROLL AND NEWLINE FIX ################
 
 A_MaxHotkeysPerInterval := 1000 
 
@@ -418,7 +418,6 @@ space::
 #HotIf WinActive("ahk_exe PowerToys.Peek.UI.exe")
 space::^w
 #HotIf
-
 ;################ HIDE/SHOW HIDDEN FILES IN FILE EXPLORER ################ HIDE/SHOW HIDDEN FILES IN FILE EXPLORER ################ HIDE/SHOW HIDDEN FILES IN FILE EXPLORER ################
 
 #HotIf WinActive("ahk_class CabinetWClass") or WinActive("ahk_class ExploreWClass")
