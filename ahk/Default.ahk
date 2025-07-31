@@ -418,4 +418,22 @@ space::
 #HotIf WinActive("ahk_exe PowerToys.Peek.UI.exe")
 space::^w
 #HotIf
+
+;################ HIDE/SHOW HIDDEN FILES IN FILE EXPLORER ################ HIDE/SHOW HIDDEN FILES IN FILE EXPLORER ################ HIDE/SHOW HIDDEN FILES IN FILE EXPLORER ################
+
+#HotIf WinActive("ahk_class CabinetWClass") or WinActive("ahk_class ExploreWClass")
+^h::
+{
+    ; Toggle registry value
+    currentSetting := RegRead("HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced", "Hidden")
+    newSetting := (currentSetting = 2) ? 1 : 2
+    RegWrite(newSetting, "REG_DWORD", "HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced", "Hidden")
+    SendMessage(0x1A, 0, StrPtr("Environment"), 0xFFFF)
+    idList := WinGetList("ahk_class CabinetWClass")
+    for this_id in idList
+    {
+        PostMessage(0x111, 41504,,, "ahk_id " . this_id)
+    }
+}
+#HotIf
 ;EOF
